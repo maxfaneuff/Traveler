@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Navtabs = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a className="navbar-brand" href="#">
-      Travelo
-    </a>
+    <Link to="/Home">
+      <span className="navbar-brand">Travelo</span>
+    </Link>
     <button
       className="navbar-toggler"
       type="button"
@@ -20,21 +20,25 @@ const Navtabs = () => (
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item active">
-          <a className="nav-link" href="#">
-            My Profile <span className="sr-only">(current)</span>
-          </a>
+          <Link to="/Cities">
+            <span className="nav-link">
+              My Profile <span className="sr-only">(current)</span>
+            </span>
+          </Link>
         </li>
         <li className="nav-item dropdown">
-          <a
-            className="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdownMenuLink"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            My Trips
-          </a>
+          <Link to="/Trips">
+            <span
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              My Trips
+            </span>
+          </Link>
           <div
             className="dropdown-menu"
             aria-labelledby="navbarDropdownMenuLink"
